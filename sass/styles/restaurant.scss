@@ -27,6 +27,8 @@
     }
     
     .restaurant-subtitle{ 
+        opacity:0;
+        animation: fadein 1s forwards;
         padding-top: 2rem;
         text-transform: uppercase;
         color: rgb(77, 77, 77);
@@ -40,15 +42,73 @@
         }
     }
     
+.wrapper-meal{ 
+    display: flex;
+    opacity:0;
+    animation: fadein 1s forwards 0.5s;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 1rem;
+    box-shadow:$bs;
+    overflow: hidden;
+    cursor:pointer;
+    &:hover{ 
+        .meal-text, .meal-title{ 
+            animation:shrink-text 1s ease-in-out forwards;
+        }
+        .valid, .meal-price{ 
+            animation:display-in 1s ease-in-out forwards;
+            i{ 
+                animation:roll 0.75s ease-in-out forwards 0.25s;
+            }
+        }
+    }
+
+}
+.valid { 
+    animation:display-out 0.5s ease-in-out forwards;
+    i{ 
+        animation:roll-out 0.5s ease-in-out forwards;
+    }
+}
+.meal-price{ 
+    animation:display-out-p 0.5s ease-in-out forwards;
+}
+
+.valid{ 
+    height: 100%;
+    position: absolute;
+    right: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 0%;
+    // animation:display 1s ease-in-out;
+    // display: none;
+    color: white;
+    padding: 0 1rem;   
+    background-color: $stress;
+    // width: 15%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    // font-size:0;
+    font-size: 2rem;
+    // padding: 0.5rem;
+}
     .meal-card{ 
-        background-color: white;
-        border-radius: 15px;
+        width: 100%;
         padding: 0.5rem;
-        margin-top: 1rem;
-        box-shadow: 0 4px 1px -2px rgb(165, 165, 165) !important;
+.meal-title,.meal-text{ 
+    animation:shrink-out-text 0.5s ease-in-out forwards;
+}
+
         .meal-title{ 
             padding: 0.25rem;
             font-weight: 600;
+            width:80%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
         .meal-details{ 
             display: flex;
@@ -68,4 +128,83 @@
         }
     }
     button{ padding-right: 3rem;padding-left: 3rem;}
+}
+
+@for $i from 1 through 15 {
+    .meal-card:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.1}s;
+    }
+    .restaurant-subtitle:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.1}s;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity:1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes display-in{ 
+    from{ 
+        transform: translateX(0px);
+
+    }
+    to{ 
+        transform: translateX(-60px);
+
+    }
+}
+
+@keyframes display-out{ 
+    from{ 
+        transform: translateX(-60px);
+
+    }
+    to{ 
+        transform: translateX(60px);
+    }
+}
+@keyframes shrink-text{ 
+    from{ 
+        width:80%;
+
+    }
+    to{ 
+        width: calc(80% - (60px));
+    }
+}
+
+@keyframes shrink-out-text{ 
+    from{ 
+        width: calc(80% - (60px));
+
+
+    }
+    to{ 
+        width: 80%;
+    }
+}
+
+@keyframes display-out-p{ 
+    from{ 
+        transform: translateX(-60px);
+
+    }
+    to{ 
+        transform: translateX(0px);
+    }
+}
+@keyframes roll{ 
+    0% {  transform:  rotate(-360deg); }
+    100% {  transform: rotate(0deg); } 
+}
+@keyframes roll-out{ 
+    0% {  transform:  rotate(0); }
+    100% {  transform: rotate(-360deg); } 
 }
