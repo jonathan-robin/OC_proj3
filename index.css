@@ -1,11 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Shrikhand&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 h1, h2, h3, h4, h5 {
   font-family: "Shrikhand", cursive;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:focus {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -20,77 +43,102 @@ header {
   position: relative;
 }
 
+.wrapper--title {
+  padding: 0 1.5rem;
+}
+
 .wrapper-header {
   display: flex;
-  padding-bottom: 0.75rem;
+  padding: 1.5rem 0;
   margin-inline: 1em;
 }
 .wrapper-header .previous-nav {
-  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
 }
 .wrapper-header img {
   width: 50%;
   margin: auto;
-  padding-top: 1rem;
+}
+
+.wrapper-subheader {
+  background-color: rgba(221, 221, 221, 0.58);
+  justify-content: center;
+  display: flex;
 }
 
 .wrapper-subheader--location {
   display: flex;
-  background-color: rgb(221, 221, 221);
-  z-index: -1;
-  justify-content: center;
+  align-items: center;
+  width: fit-content;
 }
 .wrapper-subheader--location i {
   height: fit-content;
+  margin-right: 1rem;
 }
 
 .wrapper-explore {
-  background-color: rgb(241, 240, 240);
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
+  background-color: rgba(241, 240, 240, 0.57);
   text-align: center;
 }
 .wrapper-explore .wrapper-explore--text {
   color: gray;
 }
-.wrapper-explore .wrapper-explore--cta button {
-  background: linear-gradient(344deg, rgb(2, 0, 36) 0%, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%) !important;
-  padding: 0.75rem;
+.wrapper-explore .wrapper-button-cta {
+  padding-bottom: 2rem;
+}
+
+.wrapper-button-cta {
+  display: flex;
+  justify-content: center;
+}
+
+.button-cta {
+  width: auto;
+  background: linear-gradient(344deg, rgb(2, 0, 36) 0%, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   border: none;
   color: white;
-  border-radius: 20px;
+  border-radius: 25px;
   font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
 }
 
 .wrapper-fonctionnement {
-  padding: 1rem;
+  padding: 1rem 0;
 }
 .wrapper-fonctionnement .wrapper-step {
-  background-color: rgb(240, 240, 240);
+  background-color: rgba(240, 240, 240, 0.34);
   box-shadow: 0 4px 1px -2px rgb(214, 214, 214) !important;
   border-radius: 20px;
   margin-bottom: 1rem;
 }
 .wrapper-fonctionnement .wrapper-step--card {
   display: flex;
-  padding: 1rem;
+  align-items: center;
+  padding: 1.25rem 0;
 }
 .wrapper-fonctionnement .wrapper-step--card div {
   margin-left: 2rem;
 }
+.wrapper-fonctionnement .wrapper-step--card .step-icon {
+  width: 10%;
+  justify-content: center;
+  display: flex;
+}
+.wrapper-fonctionnement .wrapper-step--card .step-icon i {
+  font-size: 1.75rem;
+  color: #888;
+}
 .wrapper-fonctionnement .wrapper-step--card .step-number {
   background-color: #9356DC;
   border-radius: 50%;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding: 0.25rem 0.5rem;
   color: white;
   position: absolute;
-  left: -1.5rem;
-  font-size: small;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  left: -0.6rem;
 }
 .wrapper-fonctionnement .wrapper-step--card .step-text {
   justify-content: center;
@@ -98,12 +146,20 @@ header {
   font-weight: 600;
 }
 
+.p2-0 {
+  padding: 0 2rem;
+}
+
+.p0-2 {
+  padding: 2rem 0;
+}
+
+.p2 {
+  padding: 2rem;
+}
+
 .wrapper-restaurant {
-  padding-left: 3rem;
-  padding-right: 3rem;
-  background-color: rgb(240, 240, 240);
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  background-color: rgba(240, 240, 240, 0.53);
 }
 
 .wrapper-card {
@@ -157,7 +213,6 @@ header {
 }
 
 .wrapper-footer {
-  padding: 2rem;
   background-color: rgb(71, 71, 71);
 }
 .wrapper-footer .wrapper-footer-logo {
@@ -179,6 +234,80 @@ header {
 }
 .wrapper-footer .footer-link p {
   margin-bottom: 0;
+}
+
+.restaurant-carte .wrapper-background-img {
+  overflow: hidden;
+}
+.restaurant-carte .wrapper-background-img img {
+  position: relative;
+  width: 110%;
+  height: fit-content;
+  height: 280px;
+  object-fit: cover;
+}
+.restaurant-carte .wrapper-section-menu {
+  margin-top: -60px;
+  background-color: rgb(238, 238, 238);
+  position: relative;
+  border-radius: 3rem 3rem 0 0;
+}
+.restaurant-carte .restaurant-title {
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.restaurant-carte .restaurant-title h3 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+.restaurant-carte .restaurant-title i {
+  font-size: 1.5rem;
+}
+.restaurant-carte .restaurant-subtitle {
+  padding-top: 2rem;
+  text-transform: uppercase;
+  color: rgb(77, 77, 77);
+}
+.restaurant-carte .restaurant-subtitle:after {
+  height: 3px;
+  width: 10%;
+  background-color: #99E2D0;
+  content: "";
+  display: flex;
+  margin-top: 0.25rem;
+}
+.restaurant-carte .meal-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 1px -2px rgb(165, 165, 165) !important;
+}
+.restaurant-carte .meal-card .meal-title {
+  padding: 0.25rem;
+  font-weight: 600;
+}
+.restaurant-carte .meal-card .meal-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.25rem 0.25rem 0.25rem;
+}
+.restaurant-carte .meal-card .meal-details .meal-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 80%;
+  font-size: 0.9rem;
+}
+.restaurant-carte .meal-card .meal-details .meal-price {
+  font-weight: 600;
+  color: rgb(79, 79, 79);
+}
+.restaurant-carte button {
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
 /*# sourceMappingURL=index.css.map */
