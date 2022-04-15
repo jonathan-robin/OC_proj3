@@ -1,6 +1,8 @@
 .restaurant-carte{ 
-
+body{ background-color:#f0f0f059;}
     .wrapper-background-img{ 
+        max-width: 860px;
+        margin-inline: auto;
         img{ 
             position:relative;
             width: 110%; 
@@ -11,6 +13,8 @@
         overflow: hidden;
     }
     .wrapper-section-menu{ 
+        max-width: 800px;
+        margin-inline: auto;
         margin-top: -60px;
         background-color: rgb(238, 238, 238);
         position: relative;
@@ -28,13 +32,14 @@
     
     .restaurant-subtitle{ 
         opacity:0;
+        width: fit-content;
         animation: fadein 1s forwards;
         padding-top: 2rem;
         text-transform: uppercase;
         color: rgb(77, 77, 77);
         &:after{ 
             height: 3px;
-            width: 10%;
+            width: 50%;
             background-color: $stress;
             content: "";
             display: flex;
@@ -42,100 +47,85 @@
         }
     }
     
-.wrapper-meal{ 
-    display: flex;
-    opacity:0;
-    animation: fadein 1s forwards 0.5s;
-    background-color: white;
-    border-radius: 15px;
-    margin-top: 1rem;
-    box-shadow:$bs;
-    overflow: hidden;
-    cursor:pointer;
-    &:hover{ 
-        .meal-text, .meal-title{ 
-            animation:shrink-text 1s ease-in-out forwards;
-        }
-        .valid, .meal-price{ 
-            animation:display-in 1s ease-in-out forwards;
-            i{ 
-                animation:roll 0.75s ease-in-out forwards 0.25s;
+    .wrapper-meal{ 
+        display: flex;
+        opacity:0;
+        animation: fadein 1s forwards 0.5s;
+        background-color: white;
+        border-radius: 15px;
+        margin-top: 1rem;
+        box-shadow:$bs;
+        overflow: hidden;
+        cursor:pointer;
+        &:hover{ 
+            .meal-card{  
+                width: calc(100% - 80px);
+                transition: width 1s;
+            }
+            .meal-text, .meal-title{ animation:shrink-text 1s ease-in-out forwards; }
+            .valid i,.meal-price i{ animation:roll 0.75s ease-in-out forwards;}
+            .valid{ 
+                width: 60px;
+                transition: width 1s;
             }
         }
-    }
 
-}
-.valid { 
-    animation:display-out 0.5s ease-in-out forwards;
-    i{ 
-        animation:roll-out 0.5s ease-in-out forwards;
     }
-}
-.meal-price{ 
-    animation:display-out-p 0.5s ease-in-out forwards;
-}
+    .valid i{ animation:roll-out 0.5s ease-in-out forwards; } }
 
-.valid{ 
-    height: 100%;
-    position: absolute;
-    right: -60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // width: 0%;
-    // animation:display 1s ease-in-out;
-    // display: none;
-    color: white;
-    padding: 0 1rem;   
-    background-color: $stress;
-    // width: 15%;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    // font-size:0;
-    font-size: 2rem;
-    // padding: 0.5rem;
-}
+    .valid{ 
+        width: 0%;
+        transition: width  1s;
+        height: 100%;
+        position: absolute;
+        right: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: $stress;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        font-size: 2rem;
+    }
     .meal-card{ 
+        transition: width   1s;
         width: 100%;
         padding: 0.5rem;
-.meal-title,.meal-text{ 
-    animation:shrink-out-text 0.5s ease-in-out forwards;
-}
-
-        .meal-title{ 
-            padding: 0.25rem;
-            font-weight: 600;
-            width:80%;
+    .meal-title,.meal-text{ animation:shrink-out-text 0.5s ease-in-out forwards; }
+    .meal-title{ 
+        padding: 0.25rem;
+        font-weight: 600;
+        width:80%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .meal-details{ 
+        display: flex;
+        justify-content: space-between;
+        padding:0 0.25rem 0.25rem 0.25rem;
+        .meal-text{ 
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
+            width: 80%;
+            font-size: 0.9rem;
         }
-        .meal-details{ 
-            display: flex;
-            justify-content: space-between;
-            padding:0 0.25rem 0.25rem 0.25rem;
-            .meal-text{ 
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-                width: 80%;
-                font-size: 0.9rem;
-            }
-            .meal-price{ 
-                font-weight: 600;
-                color:rgb(79, 79, 79);
-            }
+        .meal-price{ 
+            font-weight: 600;
+            color:rgb(79, 79, 79);
         }
     }
     button{ padding-right: 3rem;padding-left: 3rem;}
 }
 
 @for $i from 1 through 15 {
-    .meal-card:nth-child(#{$i}n) {
-        animation-delay: #{$i * 0.1}s;
+    .wrapper-meal:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.05}s;
     }
     .restaurant-subtitle:nth-child(#{$i}n) {
-        animation-delay: #{$i * 0.1}s;
+        animation-delay: #{$i * 0.05}s;
     }
 }
 

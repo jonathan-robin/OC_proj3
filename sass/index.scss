@@ -10,7 +10,7 @@ $bs-top:rgba(0, 0, 0, 0.24) 0px 3px 8px;
 $bs: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
 
 body{ font-family:'Roboto', sans-serif; }
-h1, h2, h3, h4, h5{ font-family: 'Shrikhand', cursive;}
+// h1, h2, h3, h4, h5{ font-family: 'Shrikhand', cursive;}
 a:visited{ text-decoration: none; color:black; }
 a:hover { text-decoration: none; color:black; }
 a:focus { text-decoration: none; color:black; }
@@ -30,6 +30,8 @@ header{
     display: flex;
     padding: 1.5rem 0;
     margin-inline: 1em;
+    max-width: 800px;
+    margin: auto;
     .previous-nav{ 
         display: flex;
         justify-content: center;
@@ -73,14 +75,17 @@ header{
 }
 
 .wrapper-fonctionnement{ 
+    margin: auto;
+    max-width: 800px;
     padding: 1rem 0;
     .wrapper-step{
+        cursor:pointer;
         background-color: rgba(240, 240, 240, 0.34);
         box-shadow: $bs-step;
         border-radius: 20px;
         margin-bottom: 1rem;
         &:hover{ 
-            background-color:#9256dc33 ;
+            background-color:rgb(146 86 220 / 11%);
             .step-icon i{ color: $main}
         }
     }
@@ -106,8 +111,9 @@ header{
             border-radius:50%; 
             padding: 0.25rem 0.5rem;
             color: white;
-            position: absolute; 
-            left: -0.6rem;
+            // position: absolute; 
+            // left: -0.6rem;
+            margin-left: -10px;
         }
         .step-text{ justify-content: center; width: auto; font-weight: 600; }
       
@@ -118,10 +124,18 @@ header{
 .p0-2{ padding: 2rem 0; }
 .p2{ padding: 2rem;}
 
-.wrapper-restaurant{ background-color: rgba(240, 240, 240, 0.53);}
+.wrapper-restaurant{ background-color: rgba(240, 240, 240, 0.53); }
+
+.wrapper-restaurant--cards{  
+    width: 350px;
+    margin: auto;
+}
+
+.wrapper-cards, .wrapper--restaurant{  display: flex; flex-wrap: wrap; max-width: 800px;
+    margin: auto;}
 
 .wrapper-card{ 
-
+   
     margin-bottom: 2rem;
     background-color: white;
     border-radius: 20px;
@@ -131,7 +145,7 @@ header{
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
         display: flex;
-        .tag-new{ position: absolute; right: 4rem; 
+        .tag-new{ margin-left: 225px;position:absolute;
             p{ 
                 background-color: #99E2D0; padding: 0.5em; border-radius: 5px; color: #0e6350; font-weight: 600;
             }
@@ -175,6 +189,7 @@ header{
 }
 
 .wrapper-footer{ 
+    .wrapper--footer{ margin-inline: auto; max-width: 1200px;}
     background-color: rgb(71, 71, 71);   
     .wrapper-footer-logo{ 
         padding-bottom: 1rem;
