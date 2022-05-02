@@ -32,7 +32,8 @@ header{
     margin-inline: 1em;
     max-width: 800px;
     margin: auto;
-    .previous-nav{ 
+    .previous-nav{
+        padding-left: 1rem; 
         display: flex;
         justify-content: center;
         align-items: center;

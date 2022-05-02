@@ -69,9 +69,8 @@ body{ background-color:#f0f0f059;}
                 transition: width 1s;
             }
         }
-
     }
-    .valid i{ animation:roll-out 0.5s ease-in-out forwards; } }
+}
 
     .valid{ 
         width: 0%;
@@ -121,12 +120,8 @@ body{ background-color:#f0f0f059;}
 }
 
 @for $i from 1 through 15 {
-    .wrapper-meal:nth-child(#{$i}n) {
-        animation-delay: #{$i * 0.05}s;
-    }
-    .restaurant-subtitle:nth-child(#{$i}n) {
-        animation-delay: #{$i * 0.05}s;
-    }
+    .wrapper-meal:nth-child(#{$i}n) { animation-delay: #{$i * 0.05}s; }
+    .restaurant-subtitle:nth-child(#{$i}n) { animation-delay: #{$i * 0.05}s; }
 }
 
 @keyframes fadein {
@@ -139,57 +134,16 @@ body{ background-color:#f0f0f059;}
         transform: translateY(0px);
     }
 }
-
-@keyframes display-in{ 
-    from{ 
-        transform: translateX(0px);
-
-    }
-    to{ 
-        transform: translateX(-60px);
-
-    }
-}
-
-@keyframes display-out{ 
-    from{ 
-        transform: translateX(-60px);
-
-    }
-    to{ 
-        transform: translateX(60px);
-    }
-}
 @keyframes shrink-text{ 
-    from{ 
-        width:80%;
-
-    }
-    to{ 
-        width: calc(80% - (60px));
-    }
+    from{ width:80%; }
+    to{ width: calc(80% - (60px));}
 }
 
 @keyframes shrink-out-text{ 
-    from{ 
-        width: calc(80% - (60px));
-
-
-    }
-    to{ 
-        width: 80%;
-    }
+    from{ width: calc(80% - (60px)); }
+    to{ width: 80%; }
 }
 
-@keyframes display-out-p{ 
-    from{ 
-        transform: translateX(-60px);
-
-    }
-    to{ 
-        transform: translateX(0px);
-    }
-}
 @keyframes roll{ 
     0% {  transform:  rotate(-360deg); }
     100% {  transform: rotate(0deg); } 

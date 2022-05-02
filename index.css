@@ -51,6 +51,7 @@ header {
   margin: auto;
 }
 .wrapper-header .previous-nav {
+  margin-left: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -352,9 +353,6 @@ header {
 .restaurant-carte .wrapper-meal:hover .valid {
   width: 60px;
   transition: width 1s;
-}
-.restaurant-carte .valid i {
-  animation: roll-out 0.5s ease-in-out forwards;
 }
 
 .valid {
