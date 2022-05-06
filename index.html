@@ -4,12 +4,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css" >
     <title>Ohmyfood</title>
 </head>
 <body>
+
+    <!-- Loader spinner -->
+    <div class="parent"><div class="loader"></div></div>
 
     <!-- start header logo -->
     <header>
@@ -19,75 +22,106 @@
     </header>
     <!-- end header logo -->
 
-    <!-- start section location -->
-    <section class="wrapper-subheader">
-        <div class="wrapper-subheader--location">
-            <i class="fa fa-map-marker"></i>
-            <p class="location-text">Paris, Belleville</p>
-        </div>
-    </section>
-    <!-- end section location -->
-
-    <!-- start section explore -->
-    <section class="wrapper-explore p2">
-        <div class="wrapper--title">
-            <h1 class="explore-title">Réservez le menu qui vous convient</h1>
-        </div>
-        <div class="wrapper-explore--text">
-            <p class="location-text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        </div>
-        <div class="wrapper-button-cta">
-            <button class="button-cta">Explorer nos restaurants</button>
-        </div>
-    </section>
-    <!-- end section explore -->
-
-    <!-- start section fonctionnement -->
-    <section class="wrapper-fonctionnement p0-2">
-        <div class="wrapper--title">
-            <h1 class="fonctionnement-title">Fonctionnement</h1>
-        </div>
-        <div class="wrapper-fonctionnement--steps p2">
-            <div class="wrapper-step">
-                <div class="wrapper-step--card">
-                    <div class="step-number">1</div>
-                    <div class="step-icon"><i class="fa fa-mobile-phone"></i></div>
-                    <div class="step-text">Choisissez un restaurant</div>
-                </div>
+        <div class="page-ready">
+        <!-- start section location -->
+        <section class="wrapper-subheader">
+            <div class="wrapper-subheader--location">
+                <i class="fa fa-map-marker"></i>
+                <p class="location-text">Paris, Belleville</p>
             </div>
-            <div class="wrapper-step">
-                <div class="wrapper-step--card">
-                    <div class="step-number">2</div>
-                    <div class="step-icon"><i class="fa fa-list-alt"></i></div>
-                    <div class="step-text">Composez votre menu</div>
-                </div>
-            </div>
-            <div class="wrapper-step">
-                <div class="wrapper-step--card">
-                    <div class="step-number">3</div>
-                    <div class="step-icon"><i class="fa fa-shopping-cart"></i></div>
-                    <div class="step-text">Dégustez au restaurant</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end section fonctionnement -->
+        </section>
+        <!-- end section location -->
 
-    <!-- start section restaurants -->
-    <section class="wrapper-restaurant p0-2">
-        <div class="wrapper--restaurant">
+        <!-- start section explore -->
+        <section class="wrapper-explore p2">
             <div class="wrapper--title">
-                <h1 class="restaurant-title">Restaurants</h1>
+                <h1 class="explore-title">Réservez le menu qui vous convient</h1>
             </div>
+            <div class="wrapper-explore--text">
+                <p class="location-text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+            </div>
+            <div class="wrapper-button-cta">
+                <button class="button-cta">Explorer nos restaurants</button>
+            </div>
+        </section>
+        <!-- end section explore -->
 
-            <div class="wrapper-cards p2">
+        <!-- start section fonctionnement -->
+        <section class="wrapper-fonctionnement p0-2">
+            <div class="wrapper--title">
+                <h1 class="fonctionnement-title">Fonctionnement</h1>
+            </div>
+            <div class="wrapper-fonctionnement--steps p2">
+                <div class="wrapper-step">
+                    <div class="wrapper-step--card">
+                        <div class="step-number">1</div>
+                        <div class="step-icon"><i class="fas fa-mobile-phone"></i></div>
+                        <div class="step-text">Choisissez un restaurant</div>
+                    </div>
+                </div>
+                <div class="wrapper-step">
+                    <div class="wrapper-step--card">
+                        <div class="step-number">2</div>
+                        <div class="step-icon"><i class="fa fa-list-ul"></i></div>
+                        <div class="step-text">Composez votre menu</div>
+                    </div>
+                </div>
+                <div class="wrapper-step">
+                    <div class="wrapper-step--card">
+                        <div class="step-number">3</div>
+                        <div class="step-icon"><i class="fas fa-solid fa-store"></i></div>
+                        
+                        <div class="step-text">Dégustez au restaurant</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section fonctionnement -->
 
-                <!-- start article restaurant -->
-                <article class="wrapper-restaurant--cards">
-                    <a href="./pages/palette.html">
+        <!-- start section restaurants -->
+        <section class="wrapper-restaurant p0-2">
+            <div class="wrapper--restaurant">
+                <div class="wrapper--title">
+                    <h1 class="restaurant-title">Restaurants</h1>
+                </div>
+
+                <div class="wrapper-cards p2">
+
+                    <!-- start article restaurant -->
+                    <article class="wrapper-restaurant--cards">
+                        <a href="./pages/palette.html">
+                            <div class="wrapper-card">
+                                <div class="wrapper-card--img">
+                                    <img src="assets/images/img-1.jpg" alt="plat 1 - La palette du goût">
+                                    <div class="tag-new">
+                                        <p>Nouveau</p>
+                                    </div>
+                                </div>
+                                <div class="wrapper-card--content-text">
+                                    <div class="wrapper-card--text">
+                                        <div class="card-title">
+                                            <h3>La palette du goût</h3>
+                                        </div>
+                                        <div class="card-excerpt">
+                                            <p>Ménilmontant</p>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-card--logo">
+                                        <i class="far fa-regular fa-heart icon1"></i>
+                                        <i class="fa fa-heart icon2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <!-- end article restaurant -->
+
+                    <!-- start article restaurant -->
+                    <article class="wrapper-restaurant--cards">
+                        <a href="./pages/enchantee.html">
                         <div class="wrapper-card">
                             <div class="wrapper-card--img">
-                                <img src="assets/images/img-1.jpg" alt="plat 1 - La palette du goût">
+                                <img src="assets/images/img-2.jpg" alt="plat 2 - La note enchantée">
                                 <div class="tag-new">
                                     <p>Nouveau</p>
                                 </div>
@@ -95,102 +129,78 @@
                             <div class="wrapper-card--content-text">
                                 <div class="wrapper-card--text">
                                     <div class="card-title">
-                                        <h3>La palette du goût</h3>
+                                        <h3>La note enchantée</h3>
                                     </div>
                                     <div class="card-excerpt">
-                                        <p>Ménilmontant</p>
+                                        <p>Charonne</p>
                                     </div>
                                 </div>
                                 <div class="wrapper-card--logo">
-                                    <i class="fa fa-heart"></i>
+                                    <i class="far fa-regular fa-heart icon1"></i>
+                                    <i class="fa fa-heart icon2"></i>
                                 </div>
                             </div>
                         </div>
                     </a>
-                </article>
-                <!-- end article restaurant -->
+                    </article>
+                    <!-- end article restaurant -->
 
-                <!-- start article restaurant -->
-                <article class="wrapper-restaurant--cards">
-                    <a href="./pages/enchantee.html">
-                    <div class="wrapper-card">
-                        <div class="wrapper-card--img">
-                            <img src="assets/images/img-2.jpg" alt="plat 2 - La note enchantée">
-                            <div class="tag-new">
-                                <p>Nouveau</p>
+                    <!-- start article restaurant -->
+                    <article class="wrapper-restaurant--cards">
+                        <a href="./pages/francaise.html">
+                        <div class="wrapper-card">
+                            <div class="wrapper-card--img">
+                                <img src="assets/images/img-3.jpg" alt="Plat 3 - A la française">
+                            </div>
+                            <div class="wrapper-card--content-text">
+                                <div class="wrapper-card--text">
+                                    <div class="card-title">
+                                        <h3>A la française</h3>
+                                    </div>
+                                    <div class="card-excerpt">
+                                        <p>Cité rouge</p>
+                                    </div>
+                                </div>
+                                <div class="wrapper-card--logo">
+                                    <i class="far fa-regular fa-heart icon1"></i>
+                                <i class="fa fa-heart icon2"></i>
+                                </div>
                             </div>
                         </div>
-                        <div class="wrapper-card--content-text">
-                            <div class="wrapper-card--text">
-                                <div class="card-title">
-                                    <h3>La note enchantée</h3>
-                                </div>
-                                <div class="card-excerpt">
-                                    <p>Charonne</p>
-                                </div>
-                            </div>
-                            <div class="wrapper-card--logo">
-                                <i class="fa fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                </article>
-                <!-- end article restaurant -->
+                    </a>
+                    </article>
+                    <!-- end article restaurant -->
 
-                <!-- start article restaurant -->
-                <article class="wrapper-restaurant--cards">
-                    <a href="./pages/francaise.html">
-                    <div class="wrapper-card">
-                        <div class="wrapper-card--img">
-                            <img src="assets/images/img-3.jpg" alt="Plat 3 - A la française">
-                        </div>
-                        <div class="wrapper-card--content-text">
-                            <div class="wrapper-card--text">
-                                <div class="card-title">
-                                    <h3>A la française</h3>
-                                </div>
-                                <div class="card-excerpt">
-                                    <p>Cité rouge</p>
-                                </div>
+                    <!-- start article restaurant -->
+                    <article class="wrapper-restaurant--cards">
+                        <a href="./pages/delices.html">
+                        <div class="wrapper-card">
+                            <div class="wrapper-card--img">
+                                <img src="assets/images/img-4.jpg" alt="Plat 4 - Le délice des sens">
                             </div>
-                            <div class="wrapper-card--logo">
-                                <i class="fa fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                </article>
-                <!-- end article restaurant -->
-
-                <!-- start article restaurant -->
-                <article class="wrapper-restaurant--cards">
-                    <a href="./pages/delices.html">
-                    <div class="wrapper-card">
-                        <div class="wrapper-card--img">
-                            <img src="assets/images/img-4.jpg" alt="Plat 4 - Le délice des sens">
-                        </div>
-                        <div class="wrapper-card--content-text">
-                            <div class="wrapper-card--text">
-                                <div class="card-title">
-                                <h3>Le délice des sens</h3>
+                            <div class="wrapper-card--content-text">
+                                <div class="wrapper-card--text">
+                                    <div class="card-title">
+                                    <h3>Le délice des sens</h3>
+                                    </div>
+                                    <div class="card-excerpt">
+                                        <p>Folie-Méricourt</p>
+                                    </div>
                                 </div>
-                                <div class="card-excerpt">
-                                    <p>Folie-Méricourt</p>
+                                <div class="wrapper-card--logo">
+                                    <i class="far fa-regular fa-heart icon1"></i>
+                                <i class="fa fa-heart icon2"></i>
                                 </div>
                             </div>
-                            <div class="wrapper-card--logo">
-                                <i class="fa fa-heart"></i>
-                            </div>
                         </div>
-                    </div>
-                </a>
-                </article>
-                <!-- end article restaurant -->
+                    </a>
+                    </article>
+                    <!-- end article restaurant -->
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- end section restaurant -->
+        </section>
+        <!-- end section restaurant -->
+
 
     <!-- start footer -->
     <footer>
@@ -212,12 +222,16 @@
                         <p>Mentions légales</p>
                     </div>
                     <div class="footer-link">
-                        <p>Contact</p>
+                        <p><a href="mailto:contact@contact.com">Contact</a></p>
+
                     </div>
                 </div>
             </div>
         </div>
     </footer>
     <!-- end footer -->
+
+</div>
+
 </body>
 </html>
