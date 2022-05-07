@@ -224,7 +224,7 @@ header {
   display: flex;
 }
 .wrapper-card .wrapper-card--text {
-  width: 75%;
+  width: 70%;
   padding-left: 1rem;
 }
 .wrapper-card .wrapper-card--text .card-title h3 {
@@ -533,8 +533,11 @@ button:hover{
   box-shadow: rgb(100 100 111 / 40%) 0px 6px 29px 0px;
 }
 
-.restaurant-title:hover i.icon2{
+.restaurant-title:hover{ 
   cursor:pointer;
+}
+
+.restaurant-title:hover i.icon2{
   background:transparent;
   background: linear-gradient(344deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
   -webkit-transition: all 500ms ease-in-out;
@@ -596,8 +599,8 @@ button:hover{
   justify-content: center;
   font-size: 10px;
   position: absolute;
-  border:1.1em solid rgba(255, 255, 255, 0.8); 
-  border-left:1.1em solid black !important ;
+  border:1.1em solid #9356DC ; 
+  border-left:1.1em solid white !important ;
   animation: load8 2.5s infinite linear;
 }
 
