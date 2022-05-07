@@ -550,6 +550,7 @@ button:hover{
  }
 
  .heart-icon .icon1{ position: absolute;}
+ 
  .restaurant-title:hover i.icon1{ opacity:0; position: absolute }
  
 .wrapper-restaurant--cards:hover .wrapper-card--logo i{
@@ -601,14 +602,14 @@ button:hover{
   position: absolute;
   border:1.1em solid #9356DC ; 
   border-left:1.1em solid white !important ;
-  animation: load8 2.5s infinite linear;
+  animation: load 2.5s infinite linear;
 }
 
 @keyframes loading {
   0%{ overflow:hidden; }
   100%{ overflow:visible; }
 }
-@keyframes load8 {
+@keyframes load {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg) }
 }
