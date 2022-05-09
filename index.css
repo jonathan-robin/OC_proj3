@@ -390,7 +390,7 @@ header {
 .meal-card .meal-details {
   display: flex;
   justify-content: space-between;
-  padding: 0 0.25rem 0.25rem 0.25rem;
+  padding: 0 1.25rem 0.25rem 0.25rem;
 }
 .meal-card .meal-details .meal-text {
   text-overflow: ellipsis;
@@ -537,7 +537,9 @@ button:hover{
   cursor:pointer;
 }
 
-.restaurant-title:hover i.icon2{
+.restaurant-carte .icon1{ opacity:0; }
+
+.div-heart:hover i.icon2{
   background:transparent;
   background: linear-gradient(344deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
   -webkit-transition: all 500ms ease-in-out;
@@ -546,30 +548,9 @@ button:hover{
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  opacity:1;
  }
 
  .heart-icon .icon1{ position: absolute;}
- 
- .restaurant-title:hover i.icon1{ opacity:0; position: absolute }
- 
-.wrapper-restaurant--cards:hover .wrapper-card--logo i{
-  background:transparent;
-  background: linear-gradient(344deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-  -webkit-transform-origin: 50% bottom;
-          transform-origin: 50% bottom;
-  background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  opacity:1;
-}
-
-.icon2{ opacity:0;  color:transparent;}
-
-.wrapper-restaurant--cards:hover .wrapper-card--logo i.icon1{ opacity:0; position: absolute}
 
 .footer-link a{ color: white; }
 
@@ -582,7 +563,6 @@ button:hover{
   position: absolute;
   align-items:center; 
   justify-content: center;
-  display: flex;
   height: 100%;
   width: 100%;
   animation: vanish 8s forwards;
@@ -604,6 +584,29 @@ button:hover{
   border-left:1.1em solid white !important ;
   animation: load 2.5s infinite linear;
 }
+.restaurant-carte .restaurant-title i{ font-size: 1.8rem;}
+.restaurant-carte .div-heart{
+  position: absolute;
+  top: 2.2rem;
+  right: 5rem;
+}
+.div-heart .icon2{ color: white; }
+
+.div-heart:hover .icon2 {
+  background: linear-gradient(344deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
+  -webkit-transform-origin: 50% bottom;
+          transform-origin: 50% bottom;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.footer-link{ min-height: 34px; align-items: flex-end; }
+
+.fa-heart { position: absolute; cursor: pointer; }
 
 @keyframes loading {
   0%{ overflow:hidden; }
