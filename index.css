@@ -407,7 +407,13 @@ header {
   padding-right: 3rem;
   padding-left: 3rem;
 }
-
+a:focus, a:active {
+  outline: none;
+  -moz-outline-style: none;
+}
+.wrapper--restaurant a {
+  color: black !important;
+}
 .wrapper-meal:nth-child(1n) {
   animation-delay: 0.05s;
 }
