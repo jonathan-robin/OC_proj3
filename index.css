@@ -411,7 +411,7 @@ a:focus, a:active {
   outline: none;
   -moz-outline-style: none;
 }
-.wrapper--restaurant a {
+.wrapper--restaurant a{
   color: black !important;
 }
 .wrapper-meal:nth-child(1n) {
@@ -545,7 +545,7 @@ button:hover{
 
 .restaurant-carte .icon1{ opacity:0; }
 
-.div-heart:hover i.icon2{
+.div-heart:hover i{
   background:transparent;
   background: linear-gradient(344deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
   -webkit-transition: all 500ms ease-in-out;
@@ -556,7 +556,9 @@ button:hover{
   color: transparent;
  }
 
- .heart-icon .icon1{ position: absolute;}
+.heart-icon .icon1{ position: absolute;}
+
+.div-heart .icon1{ position: absolute; z-index: 10; }
 
 .footer-link a{ color: white; }
 
