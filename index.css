@@ -600,18 +600,6 @@ button:hover{
 }
 .div-heart .icon2{ color: white; }
 
-.div-heart:hover .icon2 {
-  background: linear-gradient(344deg, rgba(2,0,36,1) 0%, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-  -webkit-transition: all 800ms ease-in-out;
-  transition: all 800ms ease-in-out;
-  -webkit-transform-origin: 50% bottom;
-          transform-origin: 50% bottom;
-  background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
 .footer-link{ min-height: 34px; align-items: flex-end; }
 
 .fa-heart { position: absolute; cursor: pointer; }
